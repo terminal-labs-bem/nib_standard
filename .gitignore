@@ -5,6 +5,7 @@ keys.sh
 id_rsa
 id_rsa.pub
 
+poetry.lock
 package-lock.json
 __pycache__
 env
@@ -27,6 +28,7 @@ manifest
 activate.sh
 *keys.sh
 .Trash*
+
 *.zip
 *nodes
 *nohup.out

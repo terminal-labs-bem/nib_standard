@@ -13,7 +13,7 @@ package_data = \
 install_requires = \
 ['click>=8.1.3,<9.0.0',
  'flask>=3.0.0,<4.0.0',
- 'lowkit @ git+https://github.com/terminal-labs/low_kit.git@main']
+ 'highkit @ git+https://github.com/terminal-labs/high_kit.git@main']
 
 entry_points = \
 {'console_scripts': ['standardnib = standardnib.cli:cli']}

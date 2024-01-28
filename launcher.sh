@@ -7,5 +7,5 @@ wget https://github.com/tlbem/nib_standard/archive/refs/heads/main.zip
 unzip main.zip
 chmod -R 777 nib_standard-main
 chmod -R 777 nib_standard-main
-cd nib_standard
+cd nib_standard-main
 make venv.python

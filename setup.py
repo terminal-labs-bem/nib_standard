@@ -5,23 +5,29 @@ package_dir = \
 {'': 'src'}
 
 packages = \
-['standardnib', 'nibstandard.content']
+['nibstandard',
+ 'nibstandard.content',
+ 'nibstandard.functions',
+ 'nibstandard.ux']
 
 package_data = \
-{'': ['*'], 'nibstandard': ['assets/*']}
+{'': ['*'],
+ 'nibstandard': ['assets/mocking/keys/*',
+                 'assets/mocking/testdata/*',
+                 'assets/static/*',
+                 'assets/templates/*']}
 
 install_requires = \
-['click>=8.1.3,<9.0.0',
- 'flask>=3.0.0,<4.0.0',]
+['click>=8.1.3,<9.0.0', 'flask>=3.0.0,<4.0.0']
 
 entry_points = \
-{'console_scripts': ['nibstandard = nibstandard.cli:cli']}
+{'console_scripts': ['nibstandard = nibstandard.ux.cli:cli']}
 
 setup_kwargs = {
-    'name': 'standardnib',
+    'name': 'nibstandard',
     'version': '0.0.1',
     'description': '',
-    'long_description': '',
+    'long_description': '\n',
     'author': 'Michael Verhulst',
     'author_email': 'michael@terminallabs.com',
     'maintainer': 'None',
@@ -37,3 +43,4 @@ setup_kwargs = {
 
 
 setup(**setup_kwargs)
+

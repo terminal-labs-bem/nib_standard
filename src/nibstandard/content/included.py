@@ -1,1 +1,3 @@
 tomlexample = ""
+yamlexample = ""
+jsonexample = ""

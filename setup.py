@@ -5,18 +5,17 @@ package_dir = \
 {'': 'src'}
 
 packages = \
-['standardnib', 'standardnib.content']
+['standardnib', 'nibstandard.content']
 
 package_data = \
-{'': ['*'], 'standardnib': ['assets/*']}
+{'': ['*'], 'nibstandard': ['assets/*']}
 
 install_requires = \
 ['click>=8.1.3,<9.0.0',
- 'flask>=3.0.0,<4.0.0',
- 'highkit @ git+https://github.com/terminal-labs/high_kit.git@main']
+ 'flask>=3.0.0,<4.0.0',]
 
 entry_points = \
-{'console_scripts': ['standardnib = standardnib.cli:cli']}
+{'console_scripts': ['nibstandard = nibstandard.cli:cli']}
 
 setup_kwargs = {
     'name': 'standardnib',

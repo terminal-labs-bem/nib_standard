@@ -1,12 +1,11 @@
-renamedirs = [ "[repo]/src/standardnib",]
+renamedirs = [ "[repo]/src/nibstandard",]
 editlines = [ 
-[ "[repo]/Makefile", "APPNAME=\"standardnib\"", "APPNAME=\"[newname]\"",],
-[ "[repo]/pyproject.toml", "name = \"standardnib\"", "name = \"[newname]\"",],
-[ "[repo]/pyproject.toml", "packages = [{include = \"standardnib\", from = \"src\"}]", "packages = [{include = \"[newname]\", from = \"src\"}]",],
-[ "[repo]/pyproject.toml", "standardnib = 'standardnib.cli:cli'", "[newname] = '[newname].cli:cli'",],
+[ "[repo]/Makefile", "APPNAME=\"nibstandard\"", "APPNAME=\"[newname]\"",],
+[ "[repo]/pyproject.toml", "name = \"nibstandard\"", "name = \"[newname]\"",],
+[ "[repo]/pyproject.toml", "packages = [{include = \"nibstandard\", from = \"src\"}]", "packages = [{include = \"[newname]\", from = \"src\"}]",],
+[ "[repo]/pyproject.toml", "nibstandard = 'nibstandard.ux.cli:cli'", "[newname] = '[newname].cli:cli'",],
 ]
 inherited = [
-"Makefile",
 "LICENSE",
 "MANIFEST.in",
 ".gitignore",

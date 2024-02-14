@@ -10,7 +10,6 @@ packages = [{include = "standardnib", from = "src"}]
 python = "^3.11"
 click = "^8.1.3"
 flask = "^3.0.0"
-highkit = { git = "https://github.com/terminal-labs-bem/high_kit.git", branch = "main" }
 
 [tool.poetry.scripts]
 standardnib = 'standardnib.cli:cli'

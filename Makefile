@@ -1,4 +1,4 @@
-APPNAME="nibstandard"
+APPNAME="template"
 SUDOUSERNAME=$(SUDO_USER)
 CONFIGURATION="default"
 TYPE="python"

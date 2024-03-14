@@ -5,14 +5,14 @@ package_dir = \
 {'': 'src'}
 
 packages = \
-['nibstandard',
- 'nibstandard.content',
- 'nibstandard.functions',
- 'nibstandard.ux']
+['template',
+ 'template.content',
+ 'template.functions',
+ 'template.ux']
 
 package_data = \
 {'': ['*'],
- 'nibstandard': ['assets/mocking/keys/*',
+ 'template': ['assets/mocking/keys/*',
                  'assets/mocking/testdata/*',
                  'assets/static/*',
                  'assets/templates/*']}
@@ -21,10 +21,10 @@ install_requires = \
 ['click>=8.1.3,<9.0.0', 'flask>=3.0.0,<4.0.0']
 
 entry_points = \
-{'console_scripts': ['nibstandard = nibstandard.ux.cli:cli']}
+{'console_scripts': ['template = template.ux.cli:cli']}
 
 setup_kwargs = {
-    'name': 'nibstandard',
+    'name': 'template',
     'version': '0.0.1',
     'description': '',
     'long_description': '\n',

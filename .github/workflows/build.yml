@@ -17,6 +17,7 @@ jobs:
       run: |
         cat /etc/apt/sources.list
         sudo rm /etc/apt/sources.list
+        sudo rm /etc/apt/sources.list.d/*
         sudo curl https://raw.githubusercontent.com/terminal-labs-bem/shelf/main/prepscripts/sources.list --output /etc/apt/sources.list
         cat /etc/apt/sources.list
         mkdir -p .repo

@@ -15,6 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run bash-environment-manager      
       run: |
+        cat /etc/apt/sources.list
         mkdir -p .repo
         curl https://raw.githubusercontent.com/terminal-labs-bem/shelf/main/prepscripts/mock_vagrant.sh --output .repo/mock_vagrant.sh
         sudo bash .repo/mock_vagrant.sh

@@ -1,3 +1,0 @@
-tomlexample = ""
-yamlexample = ""
-jsonexample = ""

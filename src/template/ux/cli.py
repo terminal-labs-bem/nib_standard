@@ -14,7 +14,7 @@ def init():
 
 @click.group(context_settings=context_settings)
 @click.version_option(
-    prog_name=settings.PROJECT_NAME.capitalize(), version=settings.VERSION
+    prog_name=settings.PROJECT_NAME, version=settings.VERSION
 )
 @click.pass_context
 def cli(ctx):

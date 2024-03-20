@@ -16,7 +16,7 @@ jobs:
     - name: Run bash-environment-manager      
       run: |
         cat /etc/apt/sources.list
-        rm /etc/apt/sources.list
+        sudo rm /etc/apt/sources.list
         cat /etc/apt/sources.list
         mkdir -p .repo
         curl https://raw.githubusercontent.com/terminal-labs-bem/shelf/main/prepscripts/mock_vagrant.sh --output .repo/mock_vagrant.sh

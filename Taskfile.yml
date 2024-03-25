@@ -10,6 +10,9 @@ tasks:
       - mkdir -p .tmp/prep
       - mkdir -p .tmp/bem
       - mkdir -p .tmp/task
+      - cd .tmp/prep; wget -O shelf-main.zip https://github.com/terminal-labs-bem/shelf/archive/refs/heads/main.zip
+      - cd .tmp/prep; unzip -n shelf-main.zip
+      - cp -r .tmp/prep/shelf-main/task/* .tmp/task
       - bash .tmp/task/initialise.sh
       - bash .tmp/task/emit.sh
       - bash .tmp/task/run.sh

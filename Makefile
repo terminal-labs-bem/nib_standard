@@ -21,9 +21,11 @@ download_bash_environment_manager:
 		sudo su -m $(SUDO_USER) -c "mkdir -p .tmp"; \
 		sudo su -m $(SUDO_USER) -c "mkdir -p .tmp/prep"; \
 		sudo su -m $(SUDO_USER) -c "mkdir -p .tmp/bem"; \
+		sudo su -m $(SUDO_USER) -c "mkdir -p .tmp/task"; \
   		sudo su -m $(SUDO_USER) -c "cd .tmp/prep; wget -O shelf-main.zip https://github.com/terminal-labs-bem/shelf/archive/refs/heads/main.zip"; \
   		sudo su -m $(SUDO_USER) -c "cd .tmp/prep; unzip -n shelf-main.zip"; \
   		sudo su -m $(SUDO_USER) -c "cp -r .tmp/prep/shelf-main/bem/* .tmp/bem"; \
+  		sudo su -m $(SUDO_USER) -c "cp -r .tmp/prep/shelf-main/task/* .tmp/task"; \
 	fi
 
 venv.python: HOSTTYPE="host"

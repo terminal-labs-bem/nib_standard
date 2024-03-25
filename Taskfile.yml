@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  runtime:
+    silent: true
+    env:
+      APP: template
+    cmds:
+      - mkdir -p .tmp
+      - mkdir -p .tmp/prep
+      - mkdir -p .tmp/bem
+      - mkdir -p .tmp/task
+      - bash .tmp/task/initialise.sh
+      - bash .tmp/task/emit.sh
+      - bash .tmp/task/run.sh

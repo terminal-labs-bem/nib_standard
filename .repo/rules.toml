@@ -3,7 +3,7 @@ editlines = [
 [ "[repo]/Makefile", "APPNAME=\"template\"", "APPNAME=\"[newname]\"",],
 [ "[repo]/pyproject.toml", "name = \"template\"", "name = \"[newname]\"",],
 [ "[repo]/pyproject.toml", "packages = [{include = \"template\", from = \"src\"}]", "packages = [{include = \"[newname]\", from = \"src\"}]",],
-[ "[repo]/pyproject.toml", "template = 'template.ux.cli:cli'", "[newname] = '[newname].cli:cli'",],
+[ "[repo]/pyproject.toml", "template = 'template.ux.cli:cli'", "[newname] = '[newname].ux.cli:cli'",],
 ]
 inherited = [
 "LICENSE",

@@ -10,3 +10,8 @@ inherited = [
 "MANIFEST.in",
 ".gitignore",
 ]
+termsynced = [
+"setup.cfg",
+"setup.py",
+"tests/test_cmd_info.py",
+]

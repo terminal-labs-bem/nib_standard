@@ -17,6 +17,7 @@ coverage = "^7.4.4"
 lowkit = {git = "https://github.com/terminal-labs-bem/lowkit.git"}
 highkit = {git = "https://github.com/terminal-labs-bem/highkit.git"}
 psutil = "^5.9.8"
+texttable = "^1.7.0"
 
 
 [tool.poetry.scripts]

@@ -18,6 +18,13 @@ def init():
 def cli(ctx):
     init()
 
+@click.group(name="commands")
+def commands_group():
+    pass
+    
+@commands_group.command("cmd")
+def cmd_cmd():
+    print("basic cmd")
 
 @click.group(name="system")
 def system_group():
@@ -28,5 +35,5 @@ def system_group():
 def system_info_cmd():
     print(app.info())
 
-
+cli.add_command(commands_group)
 cli.add_command(system_group)

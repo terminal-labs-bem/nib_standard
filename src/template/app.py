@@ -1,9 +1,10 @@
 from . import settings
 
+from .core import initapp
 
 def main():
-    pass
+    initapp()
 
 
 def info():
-    return settings.PROJECT_ROOT
+    return "basic info"

@@ -15,3 +15,10 @@ termsynced = [
 "setup.py",
 "tests/test_cmd_info.py",
 ]
+semiinherited = [
+"Makefile",
+"pyproject.toml",
+"setup.cfg",
+"setup.py",
+"Taskfile.yml",
+]

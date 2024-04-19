@@ -1,10 +1,12 @@
 from . import settings
+from . import core, app
 
-from .core import initapp
+from .core import initapp, reestablishapp
 
 
 def main():
-    initapp()
+    appcontext = core.appcontext
+    initapp(appcontext)
 
 
 def info():

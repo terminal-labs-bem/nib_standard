@@ -19,16 +19,16 @@ dependencies = [
     "lowkit @ git+https://github.com/terminal-labs-bem/lowkit.git",
     "highkit @ git+https://github.com/terminal-labs-bem/highkit.git",
     "dllist>=1.1.0",
-    "extrust @ file:/home/user/Desktop/bench/template/extensions/extrust",
-    "extc @ file:/home/user/Desktop/bench/template/extensions/extc",
-    "extcython @ file:/home/user/Desktop/bench/template/extensions/extcython",
-    "ext @ file:///home/user/Desktop/bench/template/extensions/ext",
+    "extrust @ file:///vagrant/extensions/extrust",
+    "extc @ file:///vagrant/extensions/extc",
+    "extcython @ file:///vagrant/extensions/extcython",
+    "ext @ file:///vagrant/extensions/ext",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
 
 [tool.rye.workspace]
-members = ["/vagrant/.builder/template-0.1.0/extensions/*"]
+members = ["/vagrant/extensions/*"]
 
 [project.scripts]
 "template" = "template:main"

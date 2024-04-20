@@ -19,6 +19,14 @@ coverage==7.4.4
     # via template
 dllist==1.1.0
     # via template
+ext @ file:///vagrant/template/extensions/ext
+    # via template
+extc @ file:///vagrant/template/extensions/extc
+    # via template
+extcython @ file:///vagrant/template/extensions/extcython
+    # via template
+extrust @ file:///vagrant/template/extensions/extrust
+    # via template
 flake8==7.0.0
     # via highkit
     # via template
@@ -56,6 +64,7 @@ pytest==8.1.1
 texttable==1.7.0
     # via template
 pip==24.0
+    # via extc
     # via template
 setuptools==69.5.1
     # via template

@@ -1,0 +1,20 @@
+[project]
+name = "extc"
+version = "0.1.0"
+description = "Add your description here"
+dependencies = [
+    "extc","pip>=24.0",
+]
+readme = "README.md"
+requires-python = "== 3.11.8"
+
+[build-system]
+requires = ["wheel", "setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+
+

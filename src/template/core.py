@@ -134,12 +134,12 @@ class AppContext(Immutable):
                 )
                 return invocation_cmd
             return full_invocation_cmd
-            
+
         def get_venv_path():
             if "VIRTUAL_ENV" in os.environ:
                 return str(os.path.abspath(os.environ["VIRTUAL_ENV"]))
             return "none"
-            
+
         def get_venvbin_path():
             if "VIRTUAL_ENV" in os.environ:
                 return str(os.path.abspath(os.environ["VIRTUAL_ENV"] + "/bin"))
@@ -312,11 +312,12 @@ def initapp(appcontext):
     import extrust
     from extc import helloworld
     from extcython.hello import say_hello_to
-    print("#############")        
+
+    print("#############")
     print(demo())
     print(extrust.hello())
     print(helloworld.hello())
-    print(say_hello_to('me'))
+    print(say_hello_to("me"))
 
 
 def reestablishapp():

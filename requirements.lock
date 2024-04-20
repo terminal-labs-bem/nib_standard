@@ -19,22 +19,22 @@ coverage==7.4.4
     # via template
 dllist==1.1.0
     # via template
-ext @ file:///vagrant/template/extensions/ext
+ext @ file:///home/user/Desktop/bench/template/extensions/ext
     # via template
-extc @ file:///vagrant/template/extensions/extc
+extc @ file:/home/user/Desktop/bench/template/extensions/extc
     # via template
-extcython @ file:///vagrant/template/extensions/extcython
+extcython @ file:/home/user/Desktop/bench/template/extensions/extcython
     # via template
-extrust @ file:///vagrant/template/extensions/extrust
+extrust @ file:/home/user/Desktop/bench/template/extensions/extrust
     # via template
 flake8==7.0.0
     # via highkit
     # via template
-highkit @ git+https://github.com/terminal-labs-bem/highkit.git
+highkit @ git+https://github.com/terminal-labs-bem/highkit.git@5c789da9d58952374e1902f13c7870b6fafba932
     # via template
 iniconfig==2.0.0
     # via pytest
-lowkit @ git+https://github.com/terminal-labs-bem/lowkit.git
+lowkit @ git+https://github.com/terminal-labs-bem/lowkit.git@f98fbacc90c900173a35ba1643f32998b51e374e
     # via highkit
     # via template
 mccabe==0.7.0
@@ -46,6 +46,9 @@ packaging==24.0
     # via pytest
 pathspec==0.12.1
     # via black
+pip==24.0
+    # via extc
+    # via template
 platformdirs==4.2.0
     # via black
 pluggy==1.4.0
@@ -61,10 +64,7 @@ pyflakes==3.2.0
 pytest==8.1.1
     # via highkit
     # via template
-texttable==1.7.0
-    # via template
-pip==24.0
-    # via extc
-    # via template
 setuptools==69.5.1
+    # via template
+texttable==1.7.0
     # via template

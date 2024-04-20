@@ -6,7 +6,6 @@ authors = [
     { name = "verhulstm", email = "michael@terminallabs.com" }
 ]
 dependencies = []
-readme = "README.md"
 requires-python = ">= 3.8"
 
 [build-system]

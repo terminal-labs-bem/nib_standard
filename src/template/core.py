@@ -59,7 +59,7 @@ def isWritable(path: str) -> bool:
 
 
 def in_venv():
-    return sys.prefix != sys.base_prefix
+    return sys.prefix != sys.base_prefix and "VIRTUAL_ENV" in os.environ
 
 
 def props(cls):
@@ -128,10 +128,22 @@ class AppContext(Immutable):
             full_invocation_cmd = (
                 sys.argv[0] + " " + " ".join([pipes.quote(s) for s in sys.argv[1:]])
             )
-            invocation_cmd = full_invocation_cmd.replace(
-                os.environ["VIRTUAL_ENV"] + "/bin/", ""
-            )
-            return invocation_cmd
+            if "VIRTUAL_ENV" in os.environ:
+                invocation_cmd = full_invocation_cmd.replace(
+                    os.environ["VIRTUAL_ENV"] + "/bin/", ""
+                )
+                return invocation_cmd
+            return full_invocation_cmd
+            
+        def get_venv_path():
+            if "VIRTUAL_ENV" in os.environ:
+                return str(os.path.abspath(os.environ["VIRTUAL_ENV"]))
+            return "none"
+            
+        def get_venvbin_path():
+            if "VIRTUAL_ENV" in os.environ:
+                return str(os.path.abspath(os.environ["VIRTUAL_ENV"] + "/bin"))
+            return "none"
 
         installed_packages_list = get_installed_packages_list()
         invocation_cmd = get_invocation_cmd()
@@ -158,8 +170,8 @@ class AppContext(Immutable):
         self.path_to_core = str(os.path.abspath(Path(__file__)))
         self.path_to_dottmpdir = str(os.path.abspath(os.getcwd() + "/.tmp"))
         self.running_in_venv = str(in_venv())
-        self.path_to_venv = str(os.path.abspath(os.environ["VIRTUAL_ENV"]))
-        self.path_to_venv_bin = str(os.path.abspath(os.environ["VIRTUAL_ENV"] + "/bin"))
+        self.path_to_venv = str(get_venv_path())
+        self.path_to_venv_bin = str(get_venvbin_path())
         self.soft_path_to_python = str(os.path.abspath(sys.executable))
         self.hard_path_to_python = str(
             os.path.abspath(os.path.realpath(sys.executable))

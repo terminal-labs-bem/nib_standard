@@ -1,0 +1,12 @@
+Source: template
+Section: python
+Priority: optional
+Maintainer: None <None>
+Build-Depends: debhelper, dh-python, dh-virtualenv, tar
+Standards-Version: 3.9.5
+
+Package: template
+Architecture: any
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: None
+ None

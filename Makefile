@@ -28,14 +28,14 @@ download_bash_environment_manager:
   		sudo su -m $(SUDO_USER) -c "cp -r .tmp/prep/shelf-main/task/* .tmp/task"; \
 	fi
 
-venv.python: HOSTTYPE="host"
-venv.python: INTERNALUSER=$(SUDO_USER)
-venv.python: download_bash_environment_manager
+rye: HOSTTYPE="host"
+rye: INTERNALUSER=$(SUDO_USER)
+rye: download_bash_environment_manager
 	$(call kickoff)
 
-vm.venv.python: HOSTTYPE="vagrant"
-vm.venv.python: INTERNALUSER="vagrant"
-vm.venv.python: download_bash_environment_manager
+vm.rye: HOSTTYPE="vagrant"
+vm.rye: INTERNALUSER="vagrant"
+vm.rye: download_bash_environment_manager
 	@if test ! -f "Vagrantfile";then \
 		wget https://raw.githubusercontent.com/terminal-labs/bash-environment-manager-shelf/main/vagrantfiles/Vagrantfile; \
 		chown $(SUDO_USER) Vagrantfile; \

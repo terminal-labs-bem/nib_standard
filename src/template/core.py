@@ -307,19 +307,24 @@ def initapp(appcontext):
     for name, values in vars(settings).items():
         if "__" not in name:
             print(name, values)
-    
+
     print("##########")
     from ext import demo as py_demo
+
     print(py_demo())
-    
-    from extc import helloworld 
+
+    from extc import helloworld
+
     print(helloworld.hello())
-       
+
     from extcython.hello import say_hello_to
+
     print(say_hello_to("me"))
 
     import extrust
+
     print(extrust.hello())
+
 
 def reestablishapp():
     os.chdir(appcontext.invocation_dir)

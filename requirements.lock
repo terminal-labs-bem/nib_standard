@@ -7,6 +7,10 @@
 #   all-features: false
 #   with-sources: false
 
+-e file:extensions/ext
+-e file:extensions/extc
+-e file:extensions/extcython
+-e file:extensions/extrust
 -e file:.
 black==24.4.0
     # via highkit
@@ -18,14 +22,6 @@ coverage==7.4.4
     # via highkit
     # via template
 dllist==1.1.0
-    # via template
-ext @ file:///vagrant/extensions/ext
-    # via template
-extc @ file:///vagrant/extensions/extc
-    # via template
-extcython @ file:///vagrant/extensions/extcython
-    # via template
-extrust @ file:///vagrant/extensions/extrust
     # via template
 flake8==7.0.0
     # via highkit

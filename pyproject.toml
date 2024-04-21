@@ -5,6 +5,9 @@ description = "Add your description here"
 authors = [
     { name = "verhulstm", email = "michael@terminallabs.com" }
 ]
+readme = "README.md"
+requires-python = ">= 3.8"
+
 dependencies = [
     "setuptools>=69.5.1",
     "pip>=24.0",
@@ -19,16 +22,10 @@ dependencies = [
     "lowkit @ git+https://github.com/terminal-labs-bem/lowkit.git",
     "highkit @ git+https://github.com/terminal-labs-bem/highkit.git",
     "dllist>=1.1.0",
-    "extrust @ file:///vagrant/extensions/extrust",
-    "extc @ file:///vagrant/extensions/extc",
-    "extcython @ file:///vagrant/extensions/extcython",
-    "ext @ file:///vagrant/extensions/ext",
 ]
-readme = "README.md"
-requires-python = ">= 3.8"
 
 [tool.rye.workspace]
-members = ["/vagrant/extensions/*"]
+members = ["extensions/ext*"]
 
 [project.scripts]
 "template" = "template:main"

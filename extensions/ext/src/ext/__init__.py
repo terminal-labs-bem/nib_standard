@@ -1,2 +1,2 @@
 def demo() -> str:
-    return "Hello from ext!"
+    return "boilerplate for python ext seems fine"

@@ -19,3 +19,4 @@ jobs:
         sudo bash mock_vagrant.sh
         cd /vagrant; sudo su vagrant -c "sudo make rye"
         cd /vagrant; sudo find . -type d -not -name .vagrant -not -name bundler -not -name machines -not -name default -not -name virtualbox -not -name rgloader -exec rm -rf '{}' \; &> /dev/null || true
+        cd /vagrant; sudo find . -type f -not -name Vagrantfile -not -name provision.sh -not -name global.sol -not -name action_set_name -not -name creator_uid -not -name id -not -name index_uuid -not -name vagrant_cwd -exec rm -rf '{}' \; &> /dev/null || true

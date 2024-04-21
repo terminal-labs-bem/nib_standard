@@ -11,9 +11,10 @@ jobs:
 
     runs-on: self-hosted
 
-    steps:   
-    - name: Run bash-environment-manager
+    steps:
+    - name: Checkout
       uses: actions/checkout@v2 
+    - name: Run bash-environment-manager
       run: |
         curl https://raw.githubusercontent.com/terminal-labs-bem/shelf/main/prepfiles/prep_vagrant.sh --output prep_vagrant.sh
         bash prep_vagrant.sh

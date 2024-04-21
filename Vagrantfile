@@ -5,7 +5,9 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, :guest => 8080, :host => 8080, auto_correct: true  
   config.vm.provider "virtualbox" do |v|
     v.customize ['modifyvm', :id, '--nictype1', 'virtio']
-    v.memory = 4096
-    v.cpus = 1
+    v.memory = 8192
+    v.cpus = 8
   end
+  config.vm.provision "shell", 
+    path: "provision.sh"
 end

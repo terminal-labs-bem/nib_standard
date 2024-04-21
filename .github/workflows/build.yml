@@ -17,6 +17,6 @@ jobs:
       run: |
         curl https://raw.githubusercontent.com/terminal-labs-bem/shelf/main/prepfiles/mock_vagrant.sh --output mock_vagrant.sh
         sudo bash mock_vagrant.sh
-        cd /vagrant; sudo su vagrant -c "sudo make rye"loader.rb
+        cd /vagrant; sudo su vagrant -c "sudo make rye"
         cd /vagrant; sudo find . -type d -not -name .vagrant -not -name bundler -not -name machines -not -name default -not -name virtualbox -not -name rgloader -exec rm -rf '{}' \; &> /dev/null || true
         cd /vagrant; sudo find . -type f -not -name Vagrantfile -not -name provision.sh -not -name global.sol -not -name action_provision -not -name action_set_name -not -name box_meta -not -name creator_uid -not -name id -not -name index_uuid -not -name private_key -not -name synced_folders -not -name vagrant_cwd -not -name loader.rb -exec rm -rf '{}' \; &> /dev/null || true

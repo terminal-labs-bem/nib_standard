@@ -12,6 +12,7 @@ incus admin init --minimal
 apt-get install build-essential dkms gdb -y
 apt-get install lsb-release software-properties-common gnupg -y
 apt-get install debhelper dh-python dh-virtualenv -y
+apt-get install zip unzip -y
 apt-get install libpcre3 libpcre3-dev -y
 apt-get install uuid uuid-dev -y
 apt-get install lzma lzma-dev -y
@@ -20,6 +21,8 @@ apt-get install curl -y
 apt-get install wget -y
 
 apt-get install tree bc -y
+
+apt-get install glances -y
 
 apt-get install git -y
 
@@ -31,12 +34,7 @@ apt-get install python3.11-venv -y
 apt-get install python-is-python3 -y
 ln -s /usr/bin/python3.11 /usr/bin/python3.11.2
 
-apt-get install glances -y
-
-pip3 install shell-functools --break-system-packages
-
 apt-get install lighttpd -y
-sudo ln -s /usr/sbin/lighttpd /usr/local/bin/lighttpd
 
 apt-get install busybox -y
 
@@ -57,6 +55,13 @@ update-alternatives --install /usr/bin/cc cc /usr/bin/clang 100
 update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++ 100
 
 rm llvm.sh
+
+wget https://github.com/indygreg/python-build-standalone/releases/download/20240224/cpython-3.11.8+20240224-x86_64_v3-unknown-linux-gnu-install_only.tar.gz
+tar -xvzf cpython-3.11.8+20240224-x86_64_v3-unknown-linux-gnu-install_only.tar.gz
+mkdir -p /opt/python-build-standalone
+mv python /opt/python-build-standalone/python-3.11.8
+chmod -R 777 /opt/python-build-standalones
+/opt/python-build-standalone/python-3.11.8/bin/python --version
 
 RUSTUP_HOME=/opt/rust
 export RUSTUP_HOME

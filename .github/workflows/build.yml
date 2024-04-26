@@ -21,7 +21,7 @@ jobs:
         cd /vagrant; sudo su vagrant -c "sudo make rye"
     - name: build deb
       run: |
-        sudo su vagrant -c "cd vagrant; bash builddeb.sh"
+        sudo -E su vagrant -c "cd /vagrant; bash builddeb.sh"
     - name: Store artifact
       uses: actions/upload-artifact@v4
       with:

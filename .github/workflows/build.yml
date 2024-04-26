@@ -19,6 +19,9 @@ jobs:
         curl https://raw.githubusercontent.com/terminal-labs-bem/shelf/main/prepfiles/prep_vagrant.sh --output prep_vagrant.sh
         bash prep_vagrant.sh
         cd /vagrant; sudo su vagrant -c "sudo make rye"
+    - name: build deb
+      run: |
+        cd /vagrant; bash builddeb.sh
     - name: Store artifact
       uses: actions/upload-artifact@v4
       with:

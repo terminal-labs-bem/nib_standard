@@ -26,7 +26,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Store deb file
-        path: /vagrant/release/
+        path: /vagrant/release/*
 #    - name: clean
 #      run: |
 #        cd /vagrant; sudo find . -type d -not -name .vagrant -not -name bundler -not -name machines -not -name default -not -name virtualbox -not -name rgloader -exec rm -rf '{}' \; &> /dev/null || true
